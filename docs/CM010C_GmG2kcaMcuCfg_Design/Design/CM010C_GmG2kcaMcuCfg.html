@@ -1,0 +1,2733 @@
+---
+layout: default
+title: CM010C_GmG2kcaMcuCfg
+nav_order: 1
+parent: Component Design
+---
+{% raw %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
+	<meta name="author" content="Erlenbeck, Jason M"/>
+	<meta name="created" content="2014-12-29T21:00:06"/>
+	<meta name="changedby" content="Jason Erlenbeck"/>
+	<meta name="changed" content="2016-10-20T14:16:49"/>
+	<meta name="AppVersion" content="14.0300"/>
+	<meta name="Company" content="Nexteer"/>
+	
+	<style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Calibri"; font-size:x-small }
+		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
+		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
+		comment { display:none;  } 
+	</style>
+	
+</head>
+
+<body>
+<hr>
+	<p><center>
+		<h1>Overview</h1>
+		<A HREF="#table0">HSI</A><br>
+		<A HREF="#table1">Adc0_MotCtrl</A><br>
+		<A HREF="#table2">Adc1_2mSec</A><br>
+		<A HREF="#table3">TSG31</A><br>
+		<A HREF="#table4">DMA</A><br>
+		<A HREF="#table5">NTCs</A><br>
+		
+	</center></p>
+<hr>
+<A NAME="table0"><h1>Sheet 1: <em>HSI</em></h1></A>
+<table cellspacing="0" border="0">
+	<colgroup width="86"></colgroup>
+	<colgroup width="137"></colgroup>
+	<colgroup width="64"></colgroup>
+	<colgroup width="216"></colgroup>
+	<colgroup width="230"></colgroup>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">Baseline Version</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">DMA</font></td>
+		<td align="left" valign=bottom><font color="#000000">DMA0</font></td>
+		<td align="right" valign=bottom sdval="200" sdnum="1033;"><font color="#000000">200</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">DMA1</font></td>
+		<td align="right" valign=bottom sdval="210" sdnum="1033;"><font color="#000000">210</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">DMADTS</font></td>
+		<td align="right" valign=bottom sdval="220" sdnum="1033;"><font color="#000000">220</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">ADC</font></td>
+		<td align="left" valign=bottom><font color="#000000">ADC0</font></td>
+		<td align="right" valign=bottom sdval="300" sdnum="1033;"><font color="#000000">300</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">ADC1</font></td>
+		<td align="right" valign=bottom sdval="320" sdnum="1033;"><font color="#000000">320</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">ADC Diag</font></td>
+		<td align="right" valign=bottom sdval="340" sdnum="1033;"><font color="#000000">340</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">Timer</font></td>
+		<td align="left" valign=bottom><font color="#000000">WDTA0</font></td>
+		<td align="right" valign=bottom sdval="400" sdnum="1033;"><font color="#000000">400</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">OSTM0</font></td>
+		<td align="right" valign=bottom sdval="405" sdnum="1033;"><font color="#000000">405</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">OSTM1</font></td>
+		<td align="right" valign=bottom sdval="410" sdnum="1033;"><font color="#000000">410</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">OSTM3</font></td>
+		<td align="right" valign=bottom sdval="415" sdnum="1033;"><font color="#000000">415</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">OSTM4</font></td>
+		<td align="right" valign=bottom sdval="420" sdnum="1033;"><font color="#000000">420</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">OSTM5</font></td>
+		<td align="right" valign=bottom sdval="425" sdnum="1033;"><font color="#000000">425</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">OSTM6</font></td>
+		<td align="right" valign=bottom sdval="430" sdnum="1033;"><font color="#000000">430</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">OSTM7</font></td>
+		<td align="right" valign=bottom sdval="435" sdnum="1033;"><font color="#000000">435</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAUD0</font></td>
+		<td align="right" valign=bottom sdval="440" sdnum="1033;"><font color="#000000">440</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAUD1</font></td>
+		<td align="right" valign=bottom sdval="445" sdnum="1033;"><font color="#000000">445</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAUD2</font></td>
+		<td align="right" valign=bottom sdval="450" sdnum="1033;"><font color="#000000">450</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAUJ0</font></td>
+		<td align="right" valign=bottom sdval="455" sdnum="1033;"><font color="#000000">455</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAUJ1</font></td>
+		<td align="right" valign=bottom sdval="460" sdnum="1033;"><font color="#000000">460</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAUJ2</font></td>
+		<td align="right" valign=bottom sdval="465" sdnum="1033;"><font color="#000000">465</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TSG30</font></td>
+		<td align="right" valign=bottom sdval="470" sdnum="1033;"><font color="#000000">470</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TSG31</font></td>
+		<td align="right" valign=bottom sdval="475" sdnum="1033;"><font color="#000000">475</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM475A_TSG31CfgAndUse_1.0.0</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAPA0</font></td>
+		<td align="right" valign=bottom sdval="480" sdnum="1033;"><font color="#000000">480</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAPA1</font></td>
+		<td align="right" valign=bottom sdval="485" sdnum="1033;"><font color="#000000">485</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAPA2</font></td>
+		<td align="right" valign=bottom sdval="490" sdnum="1033;"><font color="#000000">490</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TAPA3</font></td>
+		<td align="right" valign=bottom sdval="495" sdnum="1033;"><font color="#000000">495</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TPBA0</font></td>
+		<td align="right" valign=bottom sdval="500" sdnum="1033;"><font color="#000000">500</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">TPBA1</font></td>
+		<td align="right" valign=bottom sdval="505" sdnum="1033;"><font color="#000000">505</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">ENCA0</font></td>
+		<td align="right" valign=bottom sdval="510" sdnum="1033;"><font color="#000000">510</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">ENCA1</font></td>
+		<td align="right" valign=bottom sdval="515" sdnum="1033;"><font color="#000000">515</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000">SerialComm</font></td>
+		<td align="left" valign=bottom><font color="#000000">CSIG0</font></td>
+		<td align="right" valign=bottom sdval="600" sdnum="1033;"><font color="#000000">600</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">CSIH0</font></td>
+		<td align="right" valign=bottom sdval="610" sdnum="1033;"><font color="#000000">610</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">CSIH1</font></td>
+		<td align="right" valign=bottom sdval="620" sdnum="1033;"><font color="#000000">620</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">CSIH2</font></td>
+		<td align="right" valign=bottom sdval="630" sdnum="1033;"><font color="#000000">630</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">CSIH3</font></td>
+		<td align="right" valign=bottom sdval="640" sdnum="1033;"><font color="#000000">640</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SENT0</font></td>
+		<td align="right" valign=bottom sdval="650" sdnum="1033;"><font color="#000000">650</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SENT1</font></td>
+		<td align="right" valign=bottom sdval="660" sdnum="1033;"><font color="#000000">660</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SENT2</font></td>
+		<td align="right" valign=bottom sdval="670" sdnum="1033;"><font color="#000000">670</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SENT3</font></td>
+		<td align="right" valign=bottom sdval="680" sdnum="1033;"><font color="#000000">680</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SENT4</font></td>
+		<td align="right" valign=bottom sdval="690" sdnum="1033;"><font color="#000000">690</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SENT5</font></td>
+		<td align="right" valign=bottom sdval="700" sdnum="1033;"><font color="#000000">700</font></td>
+		<td align="left" valign=bottom><font color="#000000">Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">RSCAN0CAN0</font></td>
+		<td align="right" valign=bottom sdval="710" sdnum="1033;"><font color="#000000">710</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">RSCAN0CAN1</font></td>
+		<td align="right" valign=bottom sdval="715" sdnum="1033;"><font color="#000000">715</font></td>
+		<td align="left" valign=bottom><font color="#000000">Optional</font></td>
+		<td align="left" valign=bottom><font color="#000000">Perhaps SW driven?</font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">RSCAN0CAN2</font></td>
+		<td align="right" valign=bottom sdval="720" sdnum="1033;"><font color="#000000">720</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">FLXA</font></td>
+		<td align="right" valign=bottom sdval="725" sdnum="1033;"><font color="#000000">725</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">FLXB</font></td>
+		<td align="right" valign=bottom sdval="730" sdnum="1033;"><font color="#000000">730</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">PSI50</font></td>
+		<td align="right" valign=bottom sdval="735" sdnum="1033;"><font color="#000000">735</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">PSI51</font></td>
+		<td align="right" valign=bottom sdval="740" sdnum="1033;"><font color="#000000">740</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SCI30</font></td>
+		<td align="right" valign=bottom sdval="745" sdnum="1033;"><font color="#000000">745</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SCI31</font></td>
+		<td align="right" valign=bottom sdval="750" sdnum="1033;"><font color="#000000">750</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">SCI32</font></td>
+		<td align="right" valign=bottom sdval="755" sdnum="1033;"><font color="#000000">755</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">RLIN30</font></td>
+		<td align="right" valign=bottom sdval="760" sdnum="1033;"><font color="#000000">760</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000">RLIN31</font></td>
+		<td align="right" valign=bottom sdval="765" sdnum="1033;"><font color="#000000">765</font></td>
+		<td align="left" valign=bottom><font color="#000000">Not Required</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+<hr>
+<A NAME="table1"><h1>Sheet 2: <em>Adc0_MotCtrl</em></h1></A>
+<table cellspacing="0" border="0">
+	<colgroup width="67"></colgroup>
+	<colgroup width="164"></colgroup>
+	<colgroup width="183"></colgroup>
+	<colgroup span="5" width="39"></colgroup>
+	<colgroup width="148"></colgroup>
+	<colgroup span="10" width="116"></colgroup>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 0</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 1</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 2</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 3</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 4</td>
+		</tr>
+	<tr>
+		<td height="86" align="center" valign=bottom>Virtual <br>Channel</td>
+		<td align="left" valign=bottom>Physical Channel</td>
+		<td align="left" valign=bottom>Signal Name</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Pull-up Resistor Control for Physical I/O Channels
+0: Pull-up resistor for the target physical I/O channel is off.
+1: Pull-up resistor for the target physical I/O channel is on.</comment>
+		PUE</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Pull-up Resistor Control for Physical I/O Channels
+0: Pull-up resistor for the target physical I/O channel is off.
+1: Pull-up resistor for the target physical I/O channel is on.</comment>
+		PDE</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Conversion Type
+0H: Normal A/D conversion
+1H: Held value A/D conversion
+3H: Self-diagnosis
+4H: Normal A/D conversion in addition mode
+5H: Normal A/D conversion with the MPX
+6H: Normal A/D conversion with the MPX in addition mode</comment>
+		CNVCLS</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Virtual Channel End Interrupt Enable
+0: INTADCDnIx is not output at virtual channel end of virtual channel n in SGx
+1: INTADCDnIx is output at virtual channel end of virtual channel n in SGx</comment>
+		ADIE</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+CNVCLS[2:0]                                        GCTRL[5:0]
+0H: Normal A/D conversion                     GCTRL[4:0]: Physical channel
+
+1H: Held value A/D conversion                 00H: The voltage held by T&amp;H0 is A/D converted.
+                                                          01H: The voltage held by T&amp;H1 is A/D converted.
+                                                          02H: The voltage held by T&amp;H2 is A/D converted.
+                                                          03H: The voltage held by T&amp;H3 is A/D converted.
+                                                          04H: The voltage held by T&amp;H4 is A/D converted.
+                                                          05H: The voltage held by T&amp;H5 is A/D converted.
+                                                          Other than above: Setting prohibited
+
+3H: Self-diagnosis                                  00H: AVREFH × 0
+                                                          04H: AVREFH × 1/4
+                                                          08H: AVREFH × 1/2
+                                                          0CH: AVREFH × 3/4
+                                                          10H: AVREFH × 1
+                                                          Other than above: Setting prohibited
+</comment>
+		GCTRL</td>
+		<td align="center" valign=bottom>ADCD0VCRj<br>(Dec)</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="left" valign=bottom>SelfDiag - 1/4</td>
+		<td align="left" valign=bottom>MotCtrlAdc0ScanGroup3Ref0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom sdval="24580" sdnum="1033;">24580</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td align="left" valign=bottom>Shunt Current A</td>
+		<td align="left" valign=bottom>MotCtrlMotCurrAdcVlyA</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="left" valign=bottom>Shunt Current B</td>
+		<td align="left" valign=bottom>MotCtrlMotCurrAdcVlyB</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="left" valign=bottom>Shunt Current C</td>
+		<td align="left" valign=bottom>MotCtrlMotCurrAdcVlyC</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="left" valign=bottom>SelfDiag - 3/4</td>
+		<td align="left" valign=bottom>MotCtrlAdc0ScanGroup3Ref1</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="12" sdnum="1033;">12</td>
+		<td align="center" valign=bottom sdval="24588" sdnum="1033;">24588</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="5" sdnum="1033;">5</td>
+		<td align="left" valign=bottom>SelfDiag - 1/4</td>
+		<td align="left" valign=bottom>MotCtrlAdc0ScanGroup2Ref0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom sdval="24580" sdnum="1033;">24580</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="6" sdnum="1033;">6</td>
+		<td align="left" valign=bottom>Shunt Current A</td>
+		<td align="left" valign=bottom>MotCtrlMotCurrAdcPeakA</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="7" sdnum="1033;">7</td>
+		<td align="left" valign=bottom>Shunt Current B</td>
+		<td align="left" valign=bottom>MotCtrlMotCurrAdcPeakB</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="left" valign=bottom>Shunt Current C</td>
+		<td align="left" valign=bottom>MotCtrlMotCurrAdcPeakC</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="9" sdnum="1033;">9</td>
+		<td align="left" valign=bottom>Shunt Current Reference - Inverter 1</td>
+		<td align="left" valign=bottom>MotCtrlMotCurrSnsrOffs1</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="10" sdnum="1033;">10</td>
+		<td align="left" valign=bottom>SelfDiag - 3/4</td>
+		<td align="left" valign=bottom>MotCtrlAdc0ScanGroup2Ref1</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="12" sdnum="1033;">12</td>
+		<td align="center" valign=bottom sdval="24588" sdnum="1033;">24588</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="11" sdnum="1033;">11</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="12" sdnum="1033;">12</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="13" sdnum="1033;">13</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="14" sdnum="1033;">14</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="15" sdnum="1033;">15</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="16" sdnum="1033;">16</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="17" sdnum="1033;">17</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="18" sdnum="1033;">18</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="19" sdnum="1033;">19</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="20" sdnum="1033;">20</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="21" sdnum="1033;">21</td>
+		<td align="left" valign=bottom>SelfDiag - 1/2</td>
+		<td align="left" valign=bottom>MotCtrlAdc0SelfDiag0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="22" sdnum="1033;">22</td>
+		<td align="left" valign=bottom>SelfDiag - 1</td>
+		<td align="left" valign=bottom>MotCtrlAdc0SelfDiag2</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="16" sdnum="1033;">16</td>
+		<td align="center" valign=bottom sdval="24592" sdnum="1033;">24592</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="23" sdnum="1033;">23</td>
+		<td align="left" valign=bottom>SelfDiag - 0</td>
+		<td align="left" valign=bottom>MotCtrlAdc0SelfDiag4</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="24576" sdnum="1033;">24576</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Start Pointer</comment>
+		ADCD0SGVCSPx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="21" sdnum="1033;">21</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="5" sdnum="1033;">5</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+End Pointer</comment>
+		ADCD0SGVCEPx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="23" sdnum="1033;">23</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="23" sdnum="1033;">23</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="10" sdnum="1033;">10</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Multicycle Register
+</comment>
+		ADCD0SGMCYCRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Status Register</comment>
+		ADCD0SGSRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Start Control</comment>
+		ADCD0SGSTCRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Control Register
+</comment>
+		ADCD0SGCRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="17" sdnum="1033;">17</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="38" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Trigger Name<br>m File</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>AdcStrtOfCnvnMotCtrlPeak</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>AdcStrtOfCnvnMotCtrlPeak</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>AdcStrtOfCnvnMotCtrlVly</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		</tr>
+	<tr>
+		<td height="38" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Trigger<br>Physical</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Software Trigger</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>TSG31ADTRG0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>TSG31ADTRG0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>INTTSG31I7</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>N/A</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td align="right" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="right" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="right" valign=bottom sdval="5" sdnum="1033;">5</td>
+		<td align="right" valign=bottom sdval="6" sdnum="1033;">6</td>
+		<td align="center" valign=bottom sdval="7" sdnum="1033;">7</td>
+		<td align="right" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="right" valign=bottom sdval="9" sdnum="1033;">9</td>
+		<td align="center" valign=bottom sdval="10" sdnum="1033;">10</td>
+		<td align="right" valign=bottom sdval="11" sdnum="1033;">11</td>
+		<td align="right" valign=bottom sdval="12" sdnum="1033;">12</td>
+		<td align="center" valign=bottom sdval="13" sdnum="1033;">13</td>
+		<td align="right" valign=bottom sdval="14" sdnum="1033;">14</td>
+		<td align="right" valign=bottom sdval="15" sdnum="1033;">15</td>
+		<td align="center" valign=bottom sdval="16" sdnum="1033;">16</td>
+		<td align="right" valign=bottom sdval="17" sdnum="1033;">17</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+<hr>
+<A NAME="table2"><h1>Sheet 3: <em>Adc1_2mSec</em></h1></A>
+<table cellspacing="0" border="0">
+	<colgroup width="67"></colgroup>
+	<colgroup width="164"></colgroup>
+	<colgroup width="173"></colgroup>
+	<colgroup span="5" width="39"></colgroup>
+	<colgroup width="145"></colgroup>
+	<colgroup width="149"></colgroup>
+	<colgroup width="125"></colgroup>
+	<colgroup width="146"></colgroup>
+	<colgroup width="121"></colgroup>
+	<colgroup width="149"></colgroup>
+	<colgroup width="121"></colgroup>
+	<colgroup width="149"></colgroup>
+	<colgroup width="92"></colgroup>
+	<colgroup width="149"></colgroup>
+	<colgroup width="82"></colgroup>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 0</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 1</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 2</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 3</td>
+		<td colspan=2 align="center" valign=bottom>Scan Group 4</td>
+		</tr>
+	<tr>
+		<td height="86" align="center" valign=bottom>Virtual <br>Channel</td>
+		<td align="left" valign=bottom>Physical Channel</td>
+		<td align="left" valign=bottom>Signal Name</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Pull-up Resistor Control for Physical I/O Channels
+0: Pull-up resistor for the target physical I/O channel is off.
+1: Pull-up resistor for the target physical I/O channel is on.</comment>
+		PUE</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Pull-up Resistor Control for Physical I/O Channels
+0: Pull-up resistor for the target physical I/O channel is off.
+1: Pull-up resistor for the target physical I/O channel is on.</comment>
+		PDE</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Conversion Type
+0H: Normal A/D conversion
+1H: Held value A/D conversion
+3H: Self-diagnosis
+4H: Normal A/D conversion in addition mode
+5H: Normal A/D conversion with the MPX
+6H: Normal A/D conversion with the MPX in addition mode</comment>
+		CNVCLS</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Virtual Channel End Interrupt Enable
+0: INTADCDnIx is not output at virtual channel end of virtual channel n in SGx
+1: INTADCDnIx is output at virtual channel end of virtual channel n in SGx</comment>
+		ADIE</td>
+		<td align="center" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+CNVCLS[2:0]                                        GCTRL[5:0]
+0H: Normal A/D conversion                     GCTRL[4:0]: Physical channel
+
+1H: Held value A/D conversion                 00H: The voltage held by T&amp;H0 is A/D converted.
+                                                          01H: The voltage held by T&amp;H1 is A/D converted.
+                                                          02H: The voltage held by T&amp;H2 is A/D converted.
+                                                          03H: The voltage held by T&amp;H3 is A/D converted.
+                                                          04H: The voltage held by T&amp;H4 is A/D converted.
+                                                          05H: The voltage held by T&amp;H5 is A/D converted.
+                                                          Other than above: Setting prohibited
+
+3H: Self-diagnosis                                  00H: AVREFH × 0
+                                                          04H: AVREFH × 1/4
+                                                          08H: AVREFH × 1/2
+                                                          0CH: AVREFH × 3/4
+                                                          10H: AVREFH × 1
+                                                          Other than above: Setting prohibited
+</comment>
+		GCTRL</td>
+		<td align="center" valign=bottom>ADCD1VCRj<br>(Dec)</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="left" valign=bottom>SelfDiag - 1/4</td>
+		<td align="left" valign=bottom>Adc1ScanGroup3Ref0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom sdval="24580" sdnum="1033;">24580</td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom>End</td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td align="left" valign=bottom>Controller Temperature</td>
+		<td align="left" valign=bottom>EcuT</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="2" sdnum="1033;">2</td>
+		<td align="left" valign=bottom>Battery - Switched 1</td>
+		<td align="left" valign=bottom>BattVltgSwd1</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="9" sdnum="1033;">9</td>
+		<td align="center" valign=bottom sdval="9" sdnum="1033;">9</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="left" valign=bottom>SelfDiag - 3/4</td>
+		<td align="left" valign=bottom>Adc1ScanGroup3Ref1</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="12" sdnum="1033;">12</td>
+		<td align="center" valign=bottom sdval="24588" sdnum="1033;">24588</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="left" valign=bottom>SelfDiag - 1/4</td>
+		<td align="left" valign=bottom>Adc1ScanGroup2Ref0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=bottom sdval="24580" sdnum="1033;">24580</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="5" sdnum="1033;">5</td>
+		<td align="left" valign=bottom>Battery - Filtered</td>
+		<td align="left" valign=bottom>BattVltg</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="6" sdnum="1033;">6</td>
+		<td align="left" valign=bottom>SelfDiag - 3/4</td>
+		<td align="left" valign=bottom>Adc1ScanGroup2Ref1</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="12" sdnum="1033;">12</td>
+		<td align="center" valign=bottom sdval="24588" sdnum="1033;">24588</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="7" sdnum="1033;">7</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="9" sdnum="1033;">9</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="10" sdnum="1033;">10</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="11" sdnum="1033;">11</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="12" sdnum="1033;">12</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="13" sdnum="1033;">13</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="14" sdnum="1033;">14</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="15" sdnum="1033;">15</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="16" sdnum="1033;">16</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="17" sdnum="1033;">17</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="18" sdnum="1033;">18</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="19" sdnum="1033;">19</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="20" sdnum="1033;">20</td>
+		<td align="left" valign=bottom>Empty</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="21" sdnum="1033;">21</td>
+		<td align="left" valign=bottom>SelfDiag - 1/2</td>
+		<td align="left" valign=bottom>Adc1SelfDiag0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="8" sdnum="1033;">8</td>
+		<td align="center" valign=bottom sdval="24584" sdnum="1033;">24584</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Start</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="22" sdnum="1033;">22</td>
+		<td align="left" valign=bottom>SelfDiag - 1</td>
+		<td align="left" valign=bottom>Adc1SelfDiag2</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="16" sdnum="1033;">16</td>
+		<td align="center" valign=bottom sdval="24592" sdnum="1033;">24592</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom sdval="23" sdnum="1033;">23</td>
+		<td align="left" valign=bottom>SelfDiag - 0</td>
+		<td align="left" valign=bottom>Adc1SelfDiag4</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=bottom sdval="24576" sdnum="1033;">24576</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>End</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Start Pointer</comment>
+		ADCD1SGVCSPx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="21" sdnum="1033;">21</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="4" sdnum="1033;">4</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+End Pointer</comment>
+		ADCD1SGVCEPx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="23" sdnum="1033;">23</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="23" sdnum="1033;">23</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="6" sdnum="1033;">6</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="3" sdnum="1033;">3</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="right" valign=bottom sdval="0.000111111111111111" sdnum="1033;">0.000111111111111111</td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Multicycle Register
+</comment>
+		ADCD1SGMCYCRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Status Register</comment>
+		ADCD1SGSRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Read Only</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Start Control</comment>
+		ADCD1SGSTCRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><a class="comment-indicator"></a>
+		<comment>Erlenbeck, Jason M:
+Control Register
+</comment>
+		ADCD1SGCRx</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="1" sdnum="1033;">1</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="27" sdnum="1033;">27</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom sdval="0" sdnum="1033;">0</td>
+		</tr>
+	<tr>
+		<td height="38" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Trigger Name<br>m File</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>AdcStrtOfCnvn2</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>AdcStrtOfCnvn2</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>AdcStrtOfCnvn2</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>--</td>
+		</tr>
+	<tr>
+		<td height="38" align="center" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="left" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom><br></td>
+		<td align="center" valign=bottom>Trigger<br>Physical</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>Software Trigger</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>TSG31ADTRG1</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>TSG31ADTRG1</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>TSG31ADTRG1</td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=bottom>N/A</td>
+		</tr>
+</table>
+<!-- ************************************************************************** -->
+<hr>
+<A NAME="table3"><h1>Sheet 4: <em>TSG31</em></h1></A>
+<table cellspacing="0" border="0">
+	<colgroup width="171"></colgroup>
+	<colgroup width="175"></colgroup>
+	<colgroup width="122"></colgroup>
+	<colgroup width="133"></colgroup>
+	<colgroup width="270"></colgroup>
+	<colgroup width="185"></colgroup>
+	<colgroup width="153"></colgroup>
+	<tr>
+		<td height="40" align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">TSG31 Compare Register</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">TSG31 Event</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">ADCD <br>Capable</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">DMA <br>Capable</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Use Case</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">TSG31 Outputs</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Signal Names</font></i></b></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP0E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I0</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3>PWM Period</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP1E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">PhaALowrCmd</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31O2</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">PhaALowrCmd</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP2E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I2</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">PhaAUpprCmd</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31O1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">PhaAUpprCmd</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP3E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I3</font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP4E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I4</font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP5E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I5</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">PhaBLowrCmd</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31O4</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">PhaBLowrCmd</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP6E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I6</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">PhaBUpprCmd</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31O3</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">PhaBUpprCmd</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP7E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I7</font></td>
+		<td align="center" valign=middle bgcolor="#00B050" sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">AdcStrtOfCnvnMotCtrlVly</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I7</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP8E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I8</font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3><br></font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP9E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I9</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">PhaCLowrCmd</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31O6</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">PhaCLowrCmd</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP10E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I10</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">PhaCUpprCmd</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31O5</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">PhaCUpprCmd</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP11E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I11</font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle bgcolor="#00B050" sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">DmaTSG31Upd</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I11</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31CMP12E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I12</font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle bgcolor="#00B050" sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I12</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3>TSG31DCMP0E</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">AdcStrtOfCnvnMotCtrlPeak</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31ADTRG0</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31DCMP1E</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">AdcStrtOfCnvn2</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31ADTRG1</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG31DCMP2E</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31IPEK</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">MtrCtrl ISR</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31IVLY</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000">2mSec to MotCtrl DatTfr</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31IVLY</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31IER</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31IWN</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+<hr>
+<A NAME="table4"><h1>Sheet 5: <em>DMA</em></h1></A>
+<table cellspacing="0" border="0">
+	<colgroup width="101"></colgroup>
+	<colgroup width="114"></colgroup>
+	<colgroup width="197"></colgroup>
+	<colgroup width="211"></colgroup>
+	<colgroup width="128"></colgroup>
+	<colgroup width="356"></colgroup>
+	<colgroup width="380"></colgroup>
+	<colgroup width="130"></colgroup>
+	<colgroup width="212"></colgroup>
+	<tr>
+		<td height="41" align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">DMAC</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Channel</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Description</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Trigger Name<br>m File</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Trigger<br>Physical</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Source</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Destination</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Transfer Size</font></i></b></td>
+		<td align="center" valign=middle><b><i><font face="Arial" size=3 color="#000000">Transfer Length</font></i></b></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="38" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle>Adc0 Results Read</td>
+		<td align="center" valign=middle>DmaAdc0ResTrig<br>(CM320A)</td>
+		<td align="center" valign=middle>INTADCD0I3</td>
+		<td align="center" valign=middle>RegInpADCD0DR00<br>(CM300A)</td>
+		<td align="center" valign=middle> MotCtrlAdc0RawRes<br>(CM010A)</td>
+		<td align="center" valign=middle>128 bit</td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;">3</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="76" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=middle>TSG Update Group 0</td>
+		<td align="center" valign=middle>DmaTSG31Upd<br>(CM475A)</td>
+		<td align="center" valign=middle>INTTSG31I11</td>
+		<td align="center" valign=middle>MotCtrlTSG31DCMP0E<br>MotCtrlTSG31CMP0E<br>MotCtrlTSG31CMP12E<br>(CM475A)</td>
+		<td align="center" valign=middle>RegOutpTSG31DCMP0E<br>RegOutpTSG31CMP0E<br>RegOutpTSG31CMP12E<br>(CM475A)</td>
+		<td align="center" valign=middle sdval="32" sdnum="1033;">32</td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;">3</td>
+	</tr>
+	<tr>
+		<td height="76" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=middle>TSG Update Group 1</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>DMA 0.3 Chain</td>
+		<td align="center" valign=middle>MotCtrlTSG31CMPWE<br>MotCtrlTSG31CMPVE<br>MotCtrlTSG31CMPUE<br>(CM475A)</td>
+		<td align="center" valign=middle>RegOutpTSG31CMPWE<br>RegOutpTSG31CMPVE<br>RegOutpTSG31CMPUE<br>(CM475A)</td>
+		<td align="center" valign=middle sdval="32" sdnum="1033;">32</td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;">3</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="5" sdnum="1033;">5</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="6" sdnum="1033;">6</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle sdval="7" sdnum="1033;">7</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="0" sdnum="1033;">0</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="38" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle>2mSec to MotCtrl</td>
+		<td align="center" valign=middle>DmaVlyTrig<br>(CM475A)</td>
+		<td align="center" valign=middle>INTTSG31IVI</td>
+		<td align="center" valign=middle>MotCtrlMgr_TwoMilliSecToMotCtrl_Rec<br>(CM200A)</td>
+		<td align="center" valign=middle>MotCtrlMgr_MotCtrlFromTwoMilliSec_Rec<br>(CM200A)</td>
+		<td align="center" valign=middle>128 bit</td>
+		<td align="center" valign=middle>DMA9 Source (bits)/128</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="2" sdnum="1033;">2</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;">3</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="4" sdnum="1033;">4</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="5" sdnum="1033;">5</td>
+		<td align="center" valign=middle>Not Used</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>--</td>
+	</tr>
+	<tr>
+		<td height="38" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="6" sdnum="1033;">6</td>
+		<td align="center" valign=middle>Adc1 Results</td>
+		<td align="center" valign=middle>DmaAdc1ResTrig<br>(CM320A)</td>
+		<td align="center" valign=middle>INTADCD1I1</td>
+		<td align="center" valign=middle>RegInpADCD1DR00<br>(CM320A)</td>
+		<td align="center" valign=middle>MotCtrlAdc1RawRes<br>(CM010A)</td>
+		<td align="center" valign=middle>128 bit</td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;">3</td>
+	</tr>
+	<tr>
+		<td height="38" align="center" valign=middle sdval="1" sdnum="1033;">1</td>
+		<td align="center" valign=middle sdval="7" sdnum="1033;">7</td>
+		<td align="center" valign=middle>MotCtrl to 2mSec</td>
+		<td align="center" valign=middle>--</td>
+		<td align="center" valign=middle>DMA 1.4 Chain</td>
+		<td align="center" valign=middle>MotCtrlMgr_MotCtrlToTwoMilliSec_Rec<br>(CM200A)</td>
+		<td align="center" valign=middle>MotCtrlMgr_TwoMilliSecFromMotCtrl_Rec<br>(CM200A)</td>
+		<td align="center" valign=middle>128 bit</td>
+		<td align="center" valign=middle>DMA15 Source (bits)/128</td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font face="Arial" size=3 color="#000000">********* ORIGINAL DATA BELOW THIS LINE FOR COMPARISON USE ONLY ************************</font></td>
+		<td align="center" valign=bottom><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotAg0 Data Read</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaMotAg0RawData<br>(CM620A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTCSIH1IC1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegInpCSIH1RX0W<br> (CM620A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlMotAg0RawRes<br>(CM620A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">32 bit<br> (CM620A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">3<br> (CM620A)</font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Adc0 Results Read</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaAdc0ResTrig<br>(CM320A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTADCD0I3</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegInpADCD0DR00<br>(CM300A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000"> MotCtrlAdc0RawRes<br>(CM010A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">128 bit</font></td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;"><font face="Arial" size=3 color="#000000">3</font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="2" sdnum="1033;"><font face="Arial" size=3 color="#000000">2</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotAg1 Data Read</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaMotAg1RawData<br>(CM640A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTCSIH3IC0</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegInpCSIH3RX0W<br> (CM640A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlMotAg1RawRes<br>(CM640A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">32 bit<br> (CM640A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">3<br> (CM640A)</font></td>
+	</tr>
+	<tr>
+		<td height="80" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;"><font face="Arial" size=3 color="#000000">3</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG Update Group 0</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaTSG31Upd<br>(CM475A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I11</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlTSG31DCMP0E<br>MotCtrlTSG31CMP0E<br>MotCtrlTSG31CMP12E<br>(CM475A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegOutpTSG31DCMP0E<br>RegOutpTSG31CMP0E<br>RegOutpTSG31CMP12E<br>(CM475A)</font></td>
+		<td align="center" valign=middle sdval="32" sdnum="1033;"><font face="Arial" size=3 color="#000000">32</font></td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;"><font face="Arial" size=3 color="#000000">3</font></td>
+	</tr>
+	<tr>
+		<td height="80" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="4" sdnum="1033;"><font face="Arial" size=3 color="#000000">4</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">TSG Update Group 1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DMA 3 Chain</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlTSG31CMPWE<br>MotCtrlTSG31CMPVE<br>MotCtrlTSG31CMPUE<br>(CM475A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegOutpTSG31CMPWE<br>RegOutpTSG31CMPVE<br>RegOutpTSG31CMPUE<br>(CM475A)</font></td>
+		<td align="center" valign=middle sdval="32" sdnum="1033;"><font face="Arial" size=3 color="#000000">32</font></td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;"><font face="Arial" size=3 color="#000000">3</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="5" sdnum="1033;"><font face="Arial" size=3 color="#000000">5</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Not Used</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="6" sdnum="1033;"><font face="Arial" size=3 color="#000000">6</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Not Used</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle sdval="7" sdnum="1033;"><font face="Arial" size=3 color="#000000">7</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Not Used</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="0" sdnum="1033;"><font face="Arial" size=3 color="#000000">0</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Not Used</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">2mSec to MotCtrl</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaVlyTrig<br>(CM475A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31IVI</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlMgr_TwoMilliSecToMotCtrl_Rec<br>(CM200A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlMgr_MotCtrlFromTwoMilliSec_Rec<br>(CM200A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">128 bit</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DMA9 Source (bits)/128</font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="2" sdnum="1033;"><font face="Arial" size=3 color="#000000">2</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotAg1 Spi Start</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaMotAg1SpiStrt<br>(CM475A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31IVI</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotAg1TrsmStrt<br> (CM200A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegOutpCSIH3MCTL2<br> (CM640A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">32 Bit (CM640A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">1 (CM640A)</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;"><font face="Arial" size=3 color="#000000">3</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Not Used</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="4" sdnum="1033;"><font face="Arial" size=3 color="#000000">4</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotAg0 Spi Start</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaMotAg0SpiStrt<br>(CM475A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTTSG31I12</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotAg0TrsmStrt<br> (CM200A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegOutpCSIH1MCTL2<br> (CM620A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">32 Bit (CM620A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">1 (CM620A)</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="5" sdnum="1033;"><font face="Arial" size=3 color="#000000">5</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Not Used</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="6" sdnum="1033;"><font face="Arial" size=3 color="#000000">6</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">Adc1 Results</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DmaAdc1ResTrig<br>(CM320A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">INTADCD1I1</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">RegInpADCD1DR00<br>(CM320A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlAdc1RawRes<br>(CM010A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">128 bit</font></td>
+		<td align="center" valign=middle sdval="3" sdnum="1033;"><font face="Arial" size=3 color="#000000">3</font></td>
+	</tr>
+	<tr>
+		<td height="40" align="center" valign=middle sdval="1" sdnum="1033;"><font face="Arial" size=3 color="#000000">1</font></td>
+		<td align="center" valign=middle sdval="7" sdnum="1033;"><font face="Arial" size=3 color="#000000">7</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrl to 2mSec</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">--</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DMA 14 Chain</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlMgr_MotCtrlToTwoMilliSec_Rec<br>(CM200A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">MotCtrlMgr_TwoMilliSecFromMotCtrl_Rec<br>(CM200A)</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">128 bit</font></td>
+		<td align="center" valign=middle><font face="Arial" size=3 color="#000000">DMA15 Source (bits)/128</font></td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+<hr>
+<A NAME="table5"><h1>Sheet 6: <em>NTCs</em></h1></A>
+<table cellspacing="0" border="0">
+	<colgroup width="140"></colgroup>
+	<colgroup width="77"></colgroup>
+	<colgroup width="551"></colgroup>
+	<colgroup width="152"></colgroup>
+	<colgroup width="114"></colgroup>
+	<colgroup width="97"></colgroup>
+	<tr>
+		<td height="19" align="center" valign=bottom><b><i><font color="#000000">FDD Short Name</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">Source FDD</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">Name</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">Number</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">Min</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">Max</font></i></b></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=bottom><b><i><font color="#000000"><br></font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000"><br></font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000"><br></font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000"><br></font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000"><br></font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000"><br></font></i></b></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwTq0Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM650A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWTQ0MEAS_HWTQ0PRTCLNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X073</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X073</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X07A</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwTq1Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM660A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWTQ1MEAS_HWTQ1PRTCLNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X075</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X073</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X07A</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">MotAg0Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM620C</font></td>
+		<td align="left" valign=bottom><font color="#000000">MOTAG0MEAS_MOTAG0PRTCLFLTNTCNR_CNT_ENUM.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X083</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X083</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X08A</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">MotAg1Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM640C</font></td>
+		<td align="left" valign=bottom><font color="#000000">MOTAG1MEAS_MOTAG1PRTCLFLTNTCNR_CNT_ENUM.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X085</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X083</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X08A</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwAg0Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM690A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWAG0SNSR0PRTCLNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X093</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X093</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X09A</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwAg0Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM690A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWAG0IFNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X094</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X093</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X09A</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwAg0Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM690A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWAG0SNSR1PRTCLNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X095</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X093</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X09A</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwTq0Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM650A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWTQ0MEAS_HWTQ0MFGNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X1E0</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1E0</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1E3</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwTq1Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM660A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWTQ1MEAS_HWTQ1MFGNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X1E1</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1E0</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1E3</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#FF0000">HwAgVehCentrTrim</font></td>
+		<td align="left" valign=bottom><font color="#FF0000">SF053A</font></td>
+		<td align="left" valign=bottom><font color="#FF0000">HWAGVEHCENTRTRIM_HWAGVEHCENTRTRIMVLDNTCNR_CNT_ENUM.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#FF0000">NtcNr1.NTCNR_0X1E4</font></td>
+		<td align="left" valign=bottom><font color="#FF0000">NTCNR_0X1E0</font></td>
+		<td align="left" valign=bottom><font color="#FF0000">NTCNR_0X1FF</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwAg0Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM690A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWAG0MFGNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X1F9</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1F9</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1FA</font></td>
+	</tr>
+	<tr>
+		<td height="20" align="left" valign=bottom><font color="#000000">HwAg1Meas</font></td>
+		<td align="left" valign=bottom><font color="#000000">CM670A</font></td>
+		<td align="left" valign=bottom><font color="#000000">HWAG1MFGNTCNR_ULS_U16.EngVal</font></td>
+		<td align="left" valign=bottom><font color="#000000">NtcNr1.NTCNR_0X1FA</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1F9</font></td>
+		<td align="left" valign=bottom><font color="#000000">NTCNR_0X1FA</font></td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+</body>
+
+</html>
+
+{% endraw %}

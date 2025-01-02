@@ -1,0 +1,544 @@
+---
+layout: default
+title: CM200C_DmaCfgAndUse_PeripheralCfg
+nav_order: 2
+parent: Component Design
+---
+{% raw %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
+	<meta name="created" content="2006-09-16T00:00:00"/>
+	<meta name="changedby" content="Patel, Keyur"/>
+	<meta name="changed" content="2016-09-19T15:08:13"/>
+	<meta name="AppVersion" content="14.0300"/>
+	
+	<style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Calibri"; font-size:x-small }
+		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
+		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
+		comment { display:none;  } 
+	</style>
+	
+</head>
+
+<body>
+<table cellspacing="0" border="0">
+	<colgroup width="67"></colgroup>
+	<colgroup width="101"></colgroup>
+	<colgroup width="126"></colgroup>
+	<colgroup width="99"></colgroup>
+	<colgroup width="63"></colgroup>
+	<colgroup width="338"></colgroup>
+	<colgroup width="62"></colgroup>
+	<colgroup width="73"></colgroup>
+	<colgroup width="327"></colgroup>
+	<tr>
+		<td style="border-bottom: 2px solid #000000" colspan=9 height="20" align="center" valign=bottom><b><font color="#000000">DMAC Peripheral Register Configuration (base Address 0xFFFF 8000h)</font></b></td>
+		</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=bottom><b><i><font color="#000000">DMA Channel</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-right: 1px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Configurable</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-right: 1px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Offset</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Name</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Update</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Description</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Bit #</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Set/Clear</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px double #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Comment</font></i></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000" height="20" align="center" valign=bottom><b><i><font color="#D9D9D9">-</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#D9D9D9">-</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#D9D9D9">0030h</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#D9D9D9">DM0CMV</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#D9D9D9">Dynamic</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#D9D9D9">DMAC0 register access protection violation register</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#D9D9D9">31-0</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#D9D9D9">-</font></i></b></td>
+		<td style="border-right: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">protection violation register</font></i></b></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" height="20" align="center" valign=bottom><b><i><font color="#D9D9D9">-</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">-</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">0034h</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">DM1CMV</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">Dynamic</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">DMAC1 register access protection violation register</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">31-0</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">-</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-right: 2px solid #000000" align="center" valign=bottom><b><i><font color="#D9D9D9">protection violation register</font></i></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000" height="20" align="center" valign=bottom><b><i><font color="#000000">-</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">-</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">003Ch</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">CMVC</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">Static</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">Register access protection violation clear register</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">31-0</font></i></b></td>
+		<td align="center" valign=bottom><b><i><font color="#000000">7U</font></i></b></td>
+		<td style="border-right: 2px solid #000000" align="center" valign=bottom><b><i><font color="#000000">Clear protection violation register</font></i></b></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" height="20" align="center" valign=bottom><b><i><font color="#000000">DMA00</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=bottom><b><i><font color="#000000">Do Not Configure this channel - Reserved for Future Use - MotAg0 Data Read : FromSPI Register (CSIH1) to Local RAM (Motor Control)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA01</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle bgcolor="#FFFF00"><b><font color="#000000">Adc0 Results Read : FromADC Register (ADCD0) to Local RAM (Motor Control)</font></b></td>
+		</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" rowspan=27 height="544" align="center" valign=middle><font color="#000000">DMA01</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=27 align="center" valign=middle><font color="#000000">No</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">0100h + 4h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">DM01CM</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">DMAC1 Channel Master Setting</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">6-4</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=bottom><font color="#000000">Channel Master PEID Setting</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">3-2</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=bottom><font color="#000000">Channel Master SPID setting</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">1</font></td>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0U</font></td>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=bottom><font color="#000000">Channel Master UM setting: Supervisor Mode</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0400h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DSA1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC1 Source Address</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address of (RegInpADCD0DR00)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0404h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DDA1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC1 Destination Address </font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000"> [Address of (MotCtrlAdc0RawRes)] </font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">0408h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DTC1</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DMAC1 transfer Count</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">16-31</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address Reload Count</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0-15</font></td>
+		<td style="border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Transfer Count</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">040Ch + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">DTCT1</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">DMAC1 transfer control</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">27</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">DMA transfer when transfer errored</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">26</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Hardware DMA transfer request</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">18-20</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">No Chain</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">16-17</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">No Chain</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">15</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Disable - Transfer count match interrupt </font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">14</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle bgcolor="#FF0000"><font color="#000000">Enable - Transfer Completion interrupt - Trigger Motor Control ISR</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">13</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Enable - Continuous transfer</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">11-12</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Disable -Reload function 2</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">9-10</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Enable - Reload function 1(SA, DA, TC reloaded)</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">7-8</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Increment -Destinable address count direction</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">5-6</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Increment - Source Address count direction</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">2-4</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">4U</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Transfer Data Size - 128 bit</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0-1</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Block transfer 1 by transfer count</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0410h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DRSA1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC1 Reload Source Address</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address of (RegInpADCD0DR00)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0414h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DRDA1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC1 Reload Destination Address </font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">[Address of (MotCtrlAdc0RawRes)] </font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">0418h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DRTC1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DMAC1 Reload transfer Count</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">16-31</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Reload Address reload count</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0-15</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Transfer Count</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">0430h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DTFR1</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DMAC1 DTFR Setting</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">1-7</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">58U</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Hardware DMA transfer source = INTADCD0I3</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Enable - Hardware DMA transfer source</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">0414h + 40h *1</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DCEN1</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC1 Channel operation enable setting</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Enable - Channel Operation</font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA02</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">Do Not Configure this channel -Reserved for Future Use - MotAg1 Data Read : FromSPI Register (CSIH3) to Local RAM (Motor Control)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA03</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle bgcolor="#FFFF00"><b><i><font color="#000000">TSG Update Group 0 : FromLocal RAM (Motor Control) to TSG3 (TSG31) </font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA04</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle bgcolor="#FFFF00"><b><i><font color="#000000">TSG Update Group 1 : FromLocal RAM (Motor Control) to TSG3 (TSG31)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA05</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">Do not Configure this channel - Reserved for Future Use</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA06</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">SCI Rx Buffer Data Read- From SCI Rx to Local RAM</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA07</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">SCI Tx Buffer Data Read- From Local RAM to SCI Tx</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA10</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">Do not Configure this channel - Reserved for Future Use</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA11</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle bgcolor="#FFFF00"><b><i><font color="#000000">2mSec to MotCtrl : FromLocal RAM (Motor Control) to Local RAM</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA12</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">Do Not Configure this channel - Reserved for Future Use - MotAg1 Spi Start : FromLocal RAM (Motor Control) to SPI Register (CSIH3)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA13</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">Do Not Configure this channel - Reserved for Future Use -MotAg1 Reset Read Pointer: From Local RAM (Motor Control) to SPI Register (CSIH3)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA14</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000">Do Not Configure this channel - Reserved for Future Use - MotAg0 Spi Start : FromLocal RAM (Motor Control) to SPI Register (CSIH1)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA15</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle><b><i><font color="#000000"> Do Not Configure this channel - Reserved for Future Use - MotAg0 Reset Read Pointer: From Local RAM (Motor Control) to SPI Register (CSIH1)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA16</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle bgcolor="#FFFF00"><b><i><font color="#000000">Adc1 Results : FromADC Register (ADCD1) to Local RAM (Motor Control)</font></i></b></td>
+		</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" rowspan=27 height="523" align="center" valign=middle><font color="#000000">DMA16</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=27 align="center" valign=middle><font color="#000000">No</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">0120h + 4h *6</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">DM16CM</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=3 align="center" valign=middle><font color="#000000">DMAC16 Channel Master Setting</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">6-4</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=bottom><font color="#000000">Channel Master PEID Setting</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">3-2</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=bottom><font color="#000000">Channel Master SPID setting</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">1</font></td>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=bottom><font color="#000000">Channel Master UM setting</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0400h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DSA14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC14 Source Address</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address of (RegInpADCD1DR00)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0404h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DDA14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC14 Destination Address </font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address of (MotCtrlAdc1RawRes) </font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">0408h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DTC14</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DMAC14 transfer Count</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">16</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address Reload Count</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0</font></td>
+		<td style="border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Transfer Count</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">040Ch + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">DTCT14</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=13 align="center" valign=middle><font color="#000000">DMAC14 transfer control</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">27</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">DMA transfer when transfer errored</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">26</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Hardware Request</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">18-20</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">7U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Chain DMAC 1 Channel 7</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">16-17</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Chain at last transfer</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">15</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Disable - Transfer count match interrupt </font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">14</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Disable - Transfer Completion interrupt</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">13</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Disable - Continuous transfer</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">11-12</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Disable -Reload function 2</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">9-10</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Enable - Reload function 1(SA, DA, TC reloaded)</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">7-8</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Increment -Destinable address count direction</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">5-6</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Increment - Source Address count direction</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">2-4</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">4U</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Transfer Data Size - 128 bit</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0-1</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Block transfer 1 by transfer count</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0410h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DRSA14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC14 Reload Source Address</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address of (RegInpADCD1DR00)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">0414h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DRDA14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC14 Reload Destination Address </font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">31-0</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">-</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Address of (MotCtrlAdc1RawRes) </font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">0418h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DRTC14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DMAC14 Reload transfer Count</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">16-31</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdval="0" sdnum="1033;"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Reload Address reload count</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0-15</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">3U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Transfer Count</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">0430h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DTFR14</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=middle><font color="#000000">DMAC14 DTFR Setting</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">1-7</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">61U</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Hardware DMA transfer source = INTADCD1I1</font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Enable - Hardware DMA transfer source</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">0414h + 40h *14</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DCEN14</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">Static</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">DMAC14 Channel operation enable setting</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom sdnum="1033;0;@"><font color="#000000">0</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">1U</font></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" align="left" valign=middle><font color="#000000">Enable - Channel Operation</font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 2px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=middle><b><i><font color="#000000">DMA17</font></i></b></td>
+		<td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 1px solid #000000; border-right: 2px solid #000000" colspan=8 align="center" valign=middle bgcolor="#FFFF00"><b><i><font color="#000000">MotCtrl to 2mSec : FromLocal RAM (Motor Control) to Local RAM (2ms)</font></i></b></td>
+		</tr>
+	<tr>
+		<td height="19" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=middle><b><font color="#000000">Note 1: </font></b></td>
+		<td align="center" valign=middle><b><font color="#000000"><br></font></b></td>
+		<td align="left" valign=middle><font color="#000000">ZZZ= Dynamic change value, X = Don’t Care, 1=Set, 0=Clear, -=Loaded Data/Configurable Data, unspecified register bits shall have safe default value </font></td>
+		<td align="left" valign=middle><font color="#000000"><br></font></td>
+		<td align="left" valign=middle><font color="#000000"><br></font></td>
+		<td align="left" valign=middle><font color="#000000"><br></font></td>
+		<td align="left" valign=middle><font color="#000000"><br></font></td>
+		<td align="left" valign=middle><font color="#000000"><br></font></td>
+		<td align="left" valign=middle><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="19" align="center" valign=middle><b><font color="#000000">Note 2: </font></b></td>
+		<td align="center" valign=middle><b><font color="#000000"><br></font></b></td>
+		<td colspan=2 align="left" valign=bottom><font color="#000000">RSENTn, where n = 0 </font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+</table>
+<!-- ************************************************************************** -->
+</body>
+
+</html>
+
+{% endraw %}
